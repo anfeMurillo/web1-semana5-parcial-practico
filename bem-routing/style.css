@@ -1,0 +1,90 @@
+/*
+Block Element Modifier
+
+BEM (Block Element Modifier) é uma metodologia para nomear classes CSS de forma organizada e escalável. Ela divide a interface em blocos independentes (Block), seus componentes internos (Element) e variações ou estados (Modifier). O padrão de nomenclatura é:
+
+Block: representa um componente independente (ex: menu, button)
+Element: parte de um bloco, separado por dois underlines (ex: menu__item)
+Modifier: variação ou estado, separado por dois hifens (ex: menu__item--active)
+Exemplo: .card__title--highlighted
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+body.site {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* 
+Bloque layout
+*/
+
+.layout {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 1fr 10vh;
+}
+
+.layout__header {
+    background: rgb(110, 110, 228);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.layout__title {
+    margin: 0;
+    font-size: medium;
+}
+
+.layout__footer {
+    background: rgb(100, 69, 95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.layout__footer-text {
+    margin: 0;
+}
+
+.layout__main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 0;
+}
+
+.nav {
+    background: rgb(227, 232, 243);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: auto;
+}
+
+.nav__link {
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.nav__link:hover,
+.nav__link--activate {
+    background: rgb(170, 132, 196);
+}
+
+.content {
+    background: lightpink;
+    padding: 16px;
+    overflow: auto;
+    min-height: 0;
+}
